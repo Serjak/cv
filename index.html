@@ -1,477 +1,730 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="cv, curriculum, vitae, jakimenko">
-    <meta name="author" content="Sergio Jakimenko">
-    <title>Sergio Jakimenko - Resume</title>
-    <!-- cdn font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- css -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- google fonts Lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
-    <!-- others -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js"></script>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="cv, curriculum, vitae, jakimenko" />
+		<meta name="author" content="Sergio Jakimenko" />
+		<title>Sergio Jakimenko - Resume</title>
+		<!-- cdn font-awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<!-- css -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- google fonts Lato -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- others -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+				<a href="#" class="nav__home animate__animated animate__fadeInLeftBig"
+					><i class="fas fa-code"></i
+				></a>
+				<ul class="nav__menu animate__animated animate__fadeInDown">
+					<li class="nav__li"><a href="#firstBlock">Experiencia</a></li>
+					<li class="nav__li"><a href="#secondBlock">Proyectos</a></li>
+					<li class="nav__li"><a href="#thirdBlock">Conocimientos</a></li>
+					<li class="nav__li"><a href="#fourthBlock">Capacitación</a></li>
+					<li class="nav__li"><a href="#fifthBlock">Formación</a></li>
+				</ul>
+				<ul class="nav__menu-right animate__animated animate__fadeInRightBig">
+					<li class="nav__li__r"><a href="#">ES</a></li>
+					<li class="nav__li__r"><a href="#">EN</a></li>
+				</ul>
+			</nav>
 
-    <header>
-        <nav class="nav">
-            <a href="#" class="nav__home animate__animated animate__fadeInLeftBig"><i class="fas fa-code"></i></a>
-            <ul class="nav__menu animate__animated animate__fadeInDown">
-                <li class="nav__li"><a href="#firstBlock" >Experiencia</a></li>
-                <li class="nav__li"><a href="#secondBlock" >Proyectos</a></li>
-                <li class="nav__li"><a href="#thirdBlock" >Conocimientos</a></li>
-                <li class="nav__li"><a href="#fourthBlock" >Capacitación</a></li>
-                <li class="nav__li"><a href="#fifthBlock" >Formación</a></li>
-            </ul>
-            <ul class="nav__menu-right animate__animated animate__fadeInRightBig">
-                <li class="nav__li__r"><a href="#">ES</a></li>
-                <li class="nav__li__r"><a href="#">EN</a></li>
-            </ul>
-        </nav>
+			<div class="nav__mobile">
+				<div class="nav__mobile-button"></div>
+				<i class="fas fa-bars"></i>
+			</div>
 
-        <div class="nav__mobile">
-            <div class="nav__mobile-button"></div><i class="fas fa-bars"></i>
-        </div>
+			<hr
+				class="nav__bar animate__animated animate__zoomIn animate__delay-1s"
+			/>
+		</header>
 
-        <hr class="nav__bar animate__animated animate__zoomIn animate__delay-1s">
-    </header>
+		<div class="container">
+			<div
+				id="gallery__modal"
+				class="modal"
+				onclick="this.style.display='none'"
+			>
+				<span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<div class="modal__content">
+					<img id="modal__img" style="max-width: 100%" />
+				</div>
+			</div>
 
-    <div class="container">
-        
-        <div id="gallery__modal" class="modal" onclick="this.style.display='none'">
-            <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div class="modal__content">
-                <img id="modal__img" style="max-width:100%">
-            </div>
-        </div>
+			<div class="mydata">
+				<div class="header-quote">
+					<p class="quote">
+						"Part of the inhumanity of the computer is that, once it is
+						competently programmed and working smoothly, it is completely
+						honest."
+					</p>
+					<p class="author">Isaac Asimov</p>
+				</div>
 
-        <div class="mydata">
-            
-            <div class="header-quote">
-                <p class="quote">"Part of the inhumanity of the computer is that, once it is competently programmed and working smoothly, it is completely honest."</p>
-                <p class="author">Isaac Asimov</p>
-            </div>
+				<section id="about" class="about">
+					<h2 id="aboutTitle">Acerca de mí</h2>
+					<br />
+					<p>
+						Mi mundo es la tecnología, he intentado muchas cosas pero siempre me
+						mantuve en la misma línea, el diseño y la tecnología.
+						<br />
+						Soy programador full stack, me gusta el backend, me encanta el
+						frontend, fui tester, fui analista, a lo largo de mi vida pasé por
+						la mayor parte de roles que le dan vida a un software.
+						<br />
+						Mi fanatismo por la tecnología me hizo ir mas lejos cuando adquirí
+						mi primera Impresora 3D, no pasó mucho tiempo para que me arme una
+						segunda, esta vez de cero, y despues cuando creía que el plástico no
+						me alcanzaba, adquirí un cnc para madera y me sumergí también en
+						algo de carpintería.
+						<br />
+						Es algo que me apasiona pero jamás optaría por llevarlo a mi mundo
+						laboral, porque lo mío son las computadoras, el código, el diseño.
+						<br />
+						Como gamer de la vieja escuela también jugué bastante, pero me di
+						cuenta que no jugaba, sino que constantemente le prestaba atención a
+						cómo estaban hechos los juegos, a sus errores, a sus aciertos, por
+						eso también comencé a desarrollar mis propios juegos.
+					</p>
+					<br /><br />
+					<h3>Soy determinado</h3>
+					<br />
+					<ul>
+						<li>De toda la vida siempre fui un solucionador de problemas.</li>
+						<li>
+							Tengo facilidad para encontrar soluciones, aún de temas que no
+							conozco.
+						</li>
+						<li>
+							Me gusta aprender cosas nuevas, es por ello que mis conocimientos
+							son muy diversos.
+						</li>
+						<li>
+							Me considero un emprendedor, tanto dentro como fuera de una
+							empresa.
+						</li>
+					</ul>
+					<br /><br />
+					<h3>Entusiasta</h3>
+					<br />
+					<ul>
+						<li>
+							No hay nada mas lindo que ver proyectos realizados, por eso
+							siempre doy todo de mí para que esto se cumpla.
+						</li>
+						<li>
+							Considero tener la capacidad para transformar las cosas para bien.
+						</li>
+					</ul>
+					<div id="firstBlock" class="block"></div>
+				</section>
 
-            <section id="about" class="about">
-                <h2 id="aboutTitle">Acerca de mí</h2>
-                <br>
-                <p>
-                    Mi mundo es la tecnología, he intentado muchas cosas pero siempre me mantuve en la misma línea, el diseño y la tecnología.
-                    <br>
-                    Soy programador full stack, me gusta el backend, me encanta el frontend, fui tester, fui analista, a lo largo de mi vida pasé por la mayor parte de roles
-                    que le dan vida a un software.
-                    <br>
-                    Mi fanatismo por la tecnología me hizo ir mas lejos cuando adquirí mi primera Impresora 3D, no pasó mucho tiempo para que me arme una segunda,
-                    esta vez de cero, y despues cuando creía que el plástico no me alcanzaba, adquirí un cnc para madera y me sumergí también en algo de carpintería.
-                    <br>
-                    Es algo que me apasiona pero jamás optaría por llevarlo a mi mundo laboral, porque lo mío son las computadoras, el código, el diseño.
-                    <br>
-                    Como gamer de la vieja escuela también jugué bastante, pero me di cuenta que no jugaba, sino que constantemente le prestaba atención a cómo estaban hechos los juegos,
-                    a sus errores, a sus aciertos, por eso también comencé a desarrollar mis propios juegos.
-                </p>
-                <br><br>
-                <h3>Soy determinado</h3>
-                <br>
-                <ul>
-                    <li>De toda la vida siempre fui un solucionador de problemas.</li>
-                    <li>Tengo facilidad para encontrar soluciones, aún de temas que no conozco.</li>
-                    <li>Me gusta aprender cosas nuevas, es por ello que mis conocimientos son muy diversos.</li>
-                    <li>Me considero un emprendedor, tanto dentro como fuera de una empresa.</li>
-                </ul>
-                <br><br>
-                <h3>Entusiasta</h3>
-                <br>
-                <ul>
-                    <li>No hay nada mas lindo que ver proyectos realizados, por eso siempre doy todo de mí para que esto se cumpla.</li>
-                    <li>Considero tener la capacidad para transformar las cosas para bien.</li>
-                </ul>
-                <div id="firstBlock" class="block"></div>
-            </section>
+				<h2 id="experienceTitle" class="set__hidden__title">
+					Experiencia Laboral
+				</h2>
+				<section id="experience" class="experience set__hidden__section">
+					<br />
+					<article class="episode">
+						<div class="episode__number">2013 - 2021</div>
+						<div class="episode__content">
+							<div class="title">Banco Credicoop Programador Senior</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Me desempeñé como programador en Infobasic
+									para el sistema core del banco. Estuve a cargo del desarrollo
+									de la mayoría de los web services utilizados y la gestión en
+									la comunicación con el resto de los sistemas (ESB, sistemas
+									internos, Coelsa, Link, entre otros).
+								</p>
+								<br />
+								<p>
+									<u>Proyectos</u>: Crecer XXI - Core Bancario (Temenos T24 Core
+									Banking)
+								</p>
+								<br />
+								<img
+									class="client_logo"
+									src="./images/credicoop-logo.png"
+									alt="Credicoop Logo"
+								/>
+							</div>
+						</div>
+					</article>
+					<article class="episode">
+						<div class="episode__number">2010 - 2013</div>
+						<div class="episode__content">
+							<div class="title">Banco Credicoop Analista Técnico</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Participé en el análisis de toda la
+									documentación funcional previo al desarrollo del sistema
+									Crecer XXI (core bancario) y su migración desde mainframe.
+									Revisé los aspectos técnicos de las soluciones funcionales
+									propuestas.
+								</p>
+								<br />
+								<p><u>Proyectos</u>: Crecer XXI - Migración.</p>
+								<br />
+								<img
+									class="client_logo"
+									src="./images/credicoop-logo.png"
+									alt="Credicoop Logo"
+								/>
+							</div>
+						</div>
+					</article>
+					<article class="episode">
+						<div class="episode__number">2006 - 2010</div>
+						<div class="episode__content">
+							<div class="title">Practia Consultores Tester Técnico</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Trabajé mayormente con la herramienta Apache
+									JMeter para desarrollo y ejecución de pruebas de performance,
+									estrés y escalabilidad. Y utilicé la herramienta QlikView para
+									el análisis de los resultados y realización de gráficos para
+									presentar los informes. Del 2008 al 2010 estuve a cargo de 2
+									personas liderando el proyecto de pruebas técnicas en el Banco
+									Credicoop.
+								</p>
+								<br />
+								<p><u>Clientes</u>: Telefónica Argentina - Banco Credicoop</p>
+								<br />
+								<img
+									class="client_logo"
+									src="./images/telefonica-logo.png"
+									alt="Telefónica Logo"
+								/>
+								<img
+									class="client_logo"
+									src="./images/credicoop-logo.png"
+									alt="Credicoop Logo"
+								/>
+							</div>
+						</div>
+					</article>
+					<article class="episode">
+						<div class="episode__number">2004 - 2006</div>
+						<div class="episode__content">
+							<div class="title">Practia Consultores Tester Manual</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Diseñé y ejecuté casos de prueba para
+									distintos clientes.
+								</p>
+								<br />
+								<p>
+									<u>Clientes</u>: Sodexho Chile (actualmente Sodexo), Nextel,
+									Telefónica Argentina, Movistar Argentina, Tenaris, Exiros,
+									Santander México.
+								</p>
+								<br />
+								<img
+									class="client_logo"
+									src="./images/sodexo-logo.png"
+									alt="Sodexo Logo"
+								/>
+								<img
+									class="client_logo"
+									src="./images/nextel-logo.png"
+									alt="Nextel Logo"
+								/>
+								<img
+									class="client_logo"
+									src="./images/telefonica-logo.png"
+									alt="Telefónica Logo"
+								/>
+								<img
+									class="client_logo"
+									src="./images/movistar-logo.png"
+									alt="Movistar Logo"
+								/>
+								<img
+									class="client_logo"
+									src="./images/tenaris-logo.png"
+									alt="Tenaris Logo"
+								/>
+								<img
+									class="client_logo"
+									src="./images/exiros-logo.png"
+									alt="Exiros Logo"
+								/>
+								<img
+									class="client_logo"
+									src="./images/santander-logo.png"
+									alt="Santander Logo"
+								/>
+							</div>
+						</div>
+					</article>
+					<div id="secondBlock" class="block"></div>
+				</section>
 
-            <h2 id="experienceTitle" class="set__hidden__title">Experiencia Laboral</h2>
-            <section id="experience" class="experience set__hidden__section">
-                <br>
-                <article class="episode">
-                <div class="episode__number">2013 - 2021</div>
-                <div class="episode__content">
-                    <div class="title">Banco Credicoop Programador Senior</div>
-                    <div class="story">
-                        <p><u>Resumen</u>: Me desempeñé como programador en Infobasic para el 
-                        sistema core del banco. Estuve a cargo del desarrollo de la mayoría de 
-                        los web services utilizados y la gestión en la comunicación con el resto 
-                        de los sistemas (ESB, sistemas internos, Coelsa, Link, entre otros).
-                        </p>
-                        <br>
-                        <p><u>Proyectos</u>: Crecer XXI - Core Bancario (Temenos T24 Core Banking)</p>
-                        <br>
-                        <img class="client_logo" src="images/credicoop-logo.png" alt="Credicoop Logo">
-                    </div>
-                </div>
-                </article>
-                <article class="episode">
-                <div class="episode__number">2010 - 2013</div>
-                <div class="episode__content">
-                    <div class="title">Banco Credicoop Analista Técnico</div>
-                    <div class="story">
-                        <p><u>Resumen</u>: Participé en el análisis de toda la documentación funcional 
-                        previo al desarrollo del sistema Crecer XXI (core bancario) y su 
-                        migración desde mainframe. Revisé los aspectos técnicos de las 
-                        soluciones funcionales propuestas.</p>
-                        <br>
-                        <p><u>Proyectos</u>: Crecer XXI - Migración.</p>
-                        <br>
-                        <img class="client_logo" src="images/credicoop-logo.png" alt="Credicoop Logo">
-                    </div>
-                </div>
-                </article>
-                <article class="episode">
-                <div class="episode__number">2006 - 2010</div>
-                <div class="episode__content">
-                    <div class="title">Practia Consultores Tester Técnico</div>
-                    <div class="story">
-                        <p><u>Resumen</u>: Trabajé mayormente con la herramienta Apache JMeter para desarrollo y ejecución de pruebas de performance, estrés y escalabilidad.
-                        Y utilicé la herramienta QlikView para el análisis de los resultados y realización de gráficos para presentar los informes.
-                        Del 2008 al 2010 estuve a cargo de 2 personas liderando el proyecto de pruebas técnicas en el Banco Credicoop.</p>
-                        <br>
-                        <p><u>Clientes</u>: Telefónica Argentina - Banco Credicoop</p>
-                        <br>
-                        <img class="client_logo" src="images/telefonica-logo.png" alt="Telefónica Logo">
-                        <img class="client_logo" src="images/credicoop-logo.png" alt="Credicoop Logo">
-                    </div>
-                </div>
-                </article>
-                <article class="episode">
-                <div class="episode__number">2004 - 2006</div>
-                <div class="episode__content">
-                    <div class="title">Practia Consultores Tester Manual</div>
-                    <div class="story">
-                        <p><u>Resumen</u>: Diseñé y ejecuté casos de prueba para distintos clientes.</p>
-                        <br>
-                        <p><u>Clientes</u>: Sodexho Chile (actualmente Sodexo), Nextel, Telefónica Argentina, Movistar Argentina, Tenaris, Exiros, Santander México.</p>
-                        <br>
-                        <img class="client_logo" src="images/sodexo-logo.png" alt="Sodexo Logo">
-                        <img class="client_logo" src="images/nextel-logo.png" alt="Nextel Logo">
-                        <img class="client_logo" src="images/telefonica-logo.png" alt="Telefónica Logo">
-                        <img class="client_logo" src="images/movistar-logo.png" alt="Movistar Logo">
-                        <img class="client_logo" src="images/tenaris-logo.png" alt="Tenaris Logo">
-                        <img class="client_logo" src="images/exiros-logo.png" alt="Exiros Logo">
-                        <img class="client_logo" src="images/santander-logo.png" alt="Santander Logo">
-                    </div>
-                </div>
-                </article>
-                <div id="secondBlock" class="block"></div>
-            </section>
+				<h2 id="projectsTitle" class="set__hidden__title">Otros Proyectos</h2>
+				<section id="projects" class="projects set__hidden__section">
+					<br />
+					<article class="episode">
+						<div class="episode__number">2021 - En progreso</div>
+						<div class="episode__content">
+							<div class="title">Proyecto personal</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Me encuentro diseñando un juego con el motor
+									Unreal Engine 4.
+								</p>
+								<br />
+								<p>
+									<u>Detalles</u>: Juego en primera persona, estilo escape room
+									con puzzles, trampas y enemigos
+								</p>
+							</div>
+						</div>
+					</article>
+					<article class="episode">
+						<div class="episode__number">2010</div>
+						<div class="episode__content">
+							<div class="title">Dictado de curso</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Dicté un curso de pruebas técnicas en Practia
+									Consultores.
+								</p>
+								<br />
+								<p>
+									<u>Detalles</u>: El curso consistió en mostrar una
+									introducción a las pruebas técnicas, mostrando casos testigos
+									de los trabajos realizados hasta el momento.
+								</p>
+								<br />
+								<p><u>Muestras</u>:</p>
+								<br />
+								<div class="gallery">
+									<div class="gallery__item">
+										<img
+											src="./images/courses/calTec_1.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/calTec_2.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/calTec_3.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/calTec_4.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/calTec_5.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/calTec_6.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="episode">
+						<div class="episode__number">2010</div>
+						<div class="episode__content">
+							<div class="title">Dictado de taller</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Realicé un taller de automatización funcional
+									para personal de Practia Consultores.
+								</p>
+								<br />
+								<p>
+									<u>Detalles</u>: En el taller di un panorama de qué es la
+									automatización de pruebas, cuando se aconseja utilizarlo y
+									explicar porqué no es un reemplazo del testing manual.
+								</p>
+								<p>
+									Seguido a esto enseñé cómo automatizar algunas pruebas (login
+									y completar un formulario). Esto se realizó con Ruby y la
+									librería Watir (reemplazada por Selenium actualmente).
+								</p>
+								<br />
+								<p><u>Muestras</u>:</p>
+								<br />
+								<div class="gallery">
+									<div class="gallery__item">
+										<img
+											src="./images/courses/autom_1.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/autom_2.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/autom_3.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/autom_4.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/autom_5.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<div class="gallery__item">
+										<img
+											src="./images/courses/autom_6.png"
+											onclick="onClick(this)"
+											class="modal-hover"
+										/>
+									</div>
+									<p>
+										<u>Nota</u>: no se muestra lo automatizado en el taller
+										debido a que el uso de Watir está deprecado actualmente.
+									</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="episode">
+						<div class="episode__number">2009</div>
+						<div class="episode__content">
+							<div class="title">Dictado de taller</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Por tareas compartidas tuve que dictar un
+									taller sobre el uso de la herramienta HP Quality Center a
+									personal de Teléfonica de Argentina.
+								</p>
+								<br />
+								<p>
+									<u>Detalles</u>: Prioricé la explicación sobre el flujo de
+									trabajo en la herramienta, desde la ejecución de casos de
+									prueba, reporte de incidentes, cambios de estado de los mismos
+									y generación de reportes.
+								</p>
+							</div>
+						</div>
+					</article>
+					<article class="episode">
+						<div class="episode__number">2009</div>
+						<div class="episode__content">
+							<div class="title">Armado de Maqueta</div>
+							<div class="story">
+								<p>
+									<u>Resumen</u>: Armé una maqueta demo de presentación de la
+									suite HP Quality Center para presentar en Movistar.
+								</p>
+								<br />
+								<p>
+									<u>Detalles</u>: El cliente Movistar estaba interesado en
+									adquirir un set de herramientas para abarcar todas las tareas
+									del área de QA, esto incluía generación de casos de pruebas,
+									reporte de incidentes, generación de reportes y gráficos.
+								</p>
+								<p>
+									Además querían adquirir también software HP Quick Test Pro
+									para la automatización de pruebas funcionales.
+								</p>
+								<p>
+									Para esto mi tarea fue realizar una demo completa de todas las
+									etapas de un proyecto de QA dentro del cliente y
+									automatización de un ABM básico del portal de Movistar.
+								</p>
+							</div>
+						</div>
+					</article>
+					<div id="thirdBlock" class="block"></div>
+				</section>
 
-            <h2 id="projectsTitle" class="set__hidden__title">Otros Proyectos</h2>
-            <section id="projects" class="projects set__hidden__section">
-                <br>
-                <article class="episode">
-                    <div class="episode__number">2021 - En progreso</div>
-                    <div class="episode__content">
-                        <div class="title">Proyecto personal</div>
-                        <div class="story">
-                            <p>
-                                <u>Resumen</u>: Me encuentro diseñando un juego con el motor Unreal Engine 4.
-                            </p>
-                            <br>
-                            <p>
-                                <u>Detalles</u>: Juego en primera persona, estilo escape room con puzzles, trampas
-                                y enemigos
-                            </p>
-                        </div>
-                    </div>
-                </article>
-                <article class="episode">
-                    <div class="episode__number">2010</div>
-                    <div class="episode__content">
-                        <div class="title">Dictado de curso</div>
-                        <div class="story">
-                            <p>
-                                <u>Resumen</u>: Dicté un curso de pruebas técnicas en Practia Consultores.
-                            </p>
-                            <br>
-                            <p>
-                                <u>Detalles</u>: El curso consistió en mostrar una introducción a las pruebas técnicas,
-                                mostrando casos testigos de los trabajos realizados hasta el momento.
-                            </p>
-                            <br>
-                            <p>
-                                <u>Muestras</u>:
-                            </p>
-                            <br>
-                            <div class="gallery">
-                                <div class="gallery__item">
-                                    <img src='./images/courses/calTec_1.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/calTec_2.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/calTec_3.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/calTec_4.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/calTec_5.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/calTec_6.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="episode">
-                    <div class="episode__number">2010</div>
-                    <div class="episode__content">
-                        <div class="title">Dictado de taller</div>
-                        <div class="story">
-                            <p>
-                                <u>Resumen</u>: Realicé un taller de automatización funcional para personal de Practia Consultores.
-                            </p>
-                            <br>
-                            <p>
-                                <u>Detalles</u>: En el taller di un panorama de qué es la automatización de pruebas, cuando se aconseja
-                                utilizarlo y explicar porqué no es un reemplazo del testing manual.
-                            </p>
-                            <p>
-                                Seguido a esto enseñé cómo automatizar algunas pruebas (login y completar un formulario). Esto se
-                                realizó con Ruby y la librería Watir (reemplazada por Selenium actualmente).
-                            </p>
-                            <br>
-                            <p>
-                                <u>Muestras</u>:
-                            </p>
-                            <br>
-                            <div class="gallery">
-                                <div class="gallery__item">
-                                    <img src='./images/courses/autom_1.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/autom_2.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/autom_3.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/autom_4.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/autom_5.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <div class="gallery__item">
-                                    <img src='./images/courses/autom_6.png' onclick="onClick(this)" class="modal-hover">
-                                </div>
-                                <p>
-                                    <u>Nota</u>: no se muestra lo automatizado en el taller debido a que el uso de Watir está deprecado actualmente.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="episode">
-                    <div class="episode__number">2009</div>
-                    <div class="episode__content">
-                        <div class="title">Dictado de taller</div>
-                        <div class="story">
-                            <p>
-                                <u>Resumen</u>: Por tareas compartidas tuve que dictar un taller sobre el uso de la herramienta
-                                HP Quality Center a personal de Teléfonica de Argentina.
-                            </p>
-                            <br>
-                            <p>
-                                <u>Detalles</u>: Prioricé la explicación sobre el flujo de trabajo en la herramienta, desde la ejecución de casos
-                                de prueba, reporte de incidentes, cambios de estado de los mismos y generación de reportes.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-                <article class="episode">
-                    <div class="episode__number">2009</div>
-                    <div class="episode__content">
-                        <div class="title">Armado de Maqueta</div>
-                        <div class="story">
-                            <p>
-                                <u>Resumen</u>: Armé una maqueta demo de presentación de la suite HP Quality Center para presentar en Movistar.
-                            </p>
-                            <br>
-                            <p>
-                                <u>Detalles</u>: El cliente Movistar estaba interesado en adquirir un set de herramientas para abarcar
-                                todas las tareas del área de QA, esto incluía generación de casos de pruebas, reporte de incidentes, generación
-                                de reportes y gráficos.
-                            </p>
-                            <p>
-                                Además querían adquirir también software HP Quick Test Pro para la automatización de pruebas funcionales.
-                            </p>
-                            <p>
-                                Para esto mi tarea fue realizar una demo completa de todas las etapas de un proyecto de QA dentro del cliente
-                                y automatización de un ABM básico del portal de Movistar.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-                <div id="thirdBlock" class="block"></div>
-            </section>
+				<h2 id="skillsTitle" class="set__hidden__title">Conocimientos</h2>
+				<section id="skills" class="skills set__hidden__section">
+					<br />
+					<div class="soft-raiting" id="skillsContainer">
+						<script>
+							softRaiting("T24Temenos", 5, "Infobasic T24 from Temenos");
+						</script>
+						<script>
+							softRaiting("Javascript", 4);
+						</script>
+						<script>
+							softRaiting("HTML", 4);
+						</script>
+						<script>
+							softRaiting("CSS", 4);
+						</script>
+						<script>
+							softRaiting("Php", 3);
+						</script>
+						<script>
+							softRaiting("Ruby", 3);
+						</script>
+						<script>
+							softRaiting("React", 3);
+						</script>
+						<script>
+							softRaiting("Java", 3);
+						</script>
+						<script>
+							softRaiting("VisualBasic", 3, "Visual Basic");
+						</script>
+						<script>
+							softRaiting("NodeJS", 2);
+						</script>
+						<script>
+							softRaiting("CPlusPlus", 2, "C++");
+						</script>
+						<script>
+							softRaiting("Python", 1);
+						</script>
+						<script>
+							softRaiting("SQLServer", 3);
+						</script>
+						<script>
+							softRaiting("MySQL", 4);
+						</script>
+						<script>
+							softRaiting("Oracle", 2);
+						</script>
+						<script>
+							softRaiting("MongoDb", 3, "MongoDb");
+						</script>
+						<script>
+							softRaiting("SQLDeveloper", 4);
+						</script>
+						<script>
+							softRaiting("Jira", 4);
+						</script>
+						<script>
+							softRaiting("Jboss", 3);
+						</script>
+						<script>
+							softRaiting("Tomcat", 2, "Apache Tomcat");
+						</script>
+						<script>
+							softRaiting("JMeter", 4, "Apache JMeter");
+						</script>
+						<script>
+							softRaiting("SoapUI", 4);
+						</script>
+						<script>
+							softRaiting("Postman", 3);
+						</script>
+						<script>
+							softRaiting("Selenium", 3);
+						</script>
+						<script>
+							softRaiting("Photoshop", 4);
+						</script>
+						<script>
+							softRaiting("CorelDraw", 3, "Corel Draw");
+						</script>
+						<script>
+							softRaiting("Zbrush", 2);
+						</script>
+						<script>
+							softRaiting("Blender", 2);
+						</script>
+						<script>
+							softRaiting("UnrealEngine", 4, "Unreal Engine");
+						</script>
+						<script>
+							softRaiting("Excel", 5, "Microsoft Excel");
+						</script>
+						<script>
+							softRaiting("Qlikview", 3);
+						</script>
+					</div>
+					<div id="fourthBlock" class="block"></div>
+				</section>
 
-            <h2 id="skillsTitle" class="set__hidden__title">Conocimientos</h2>
-            <section id="skills" class="skills set__hidden__section">
-                <br>
-                <div class="soft-raiting" id="skillsContainer">
-                    <script>softRaiting("T24Temenos",5,"Infobasic T24 from Temenos");</script>
-                    <script>softRaiting("Javascript",4);</script>
-                    <script>softRaiting("HTML",4);</script>
-                    <script>softRaiting("CSS",4);</script>
-                    <script>softRaiting("Php",3);</script>
-                    <script>softRaiting("Ruby",3);</script>
-                    <script>softRaiting("React",3);</script>
-                    <script>softRaiting("Java",3);</script>
-                    <script>softRaiting("VisualBasic",3,"Visual Basic");</script>
-                    <script>softRaiting("NodeJS",2);</script>
-                    <script>softRaiting("CPlusPlus",2,"C++");</script>
-                    <script>softRaiting("Python",1);</script>
-                    <script>softRaiting("SQLServer",3);</script>
-                    <script>softRaiting("MySQL",4);</script>
-                    <script>softRaiting("Oracle",2);</script>
-                    <script>softRaiting("MongoDb",3, "MongoDb");</script>
-                    <script>softRaiting("SQLDeveloper",4);</script>
-                    <script>softRaiting("Jira",4);</script>
-                    <script>softRaiting("Jboss",3);</script>
-                    <script>softRaiting("Tomcat",2, "Apache Tomcat");</script>
-                    <script>softRaiting("JMeter",4, "Apache JMeter");</script>
-                    <script>softRaiting("SoapUI",4);</script>
-                    <script>softRaiting("Postman",3);</script>
-                    <script>softRaiting("Selenium",3);</script>
-                    <script>softRaiting("Photoshop",4);</script>
-                    <script>softRaiting("CorelDraw",3, "Corel Draw");</script>
-                    <script>softRaiting("Zbrush",2);</script>
-                    <script>softRaiting("Blender",2);</script>
-                    <script>softRaiting("UnrealEngine",4, "Unreal Engine");</script>
-                    <script>softRaiting("Excel",5, "Microsoft Excel");</script>
-                    <script>softRaiting("Qlikview",3);</script>
-                </div>
-                <div id="fourthBlock" class="block"></div>
-            </section>
+				<h2 id="trainingTitle" class="set__hidden__title">Capacitación</h2>
+				<section id="training" class="training set__hidden__section">
+					<br />
+					<ul>
+						<h3>2021</h3>
+						<li>
+							Full Stack Javascript Developer dictado por Camilo Montoya -
+							Udemy.
+						</li>
+						<li>
+							Desarrollo de juegos con Unreal Engine dictado por Carlos Coronado
+							- Udemy.
+						</li>
+					</ul>
+					<br />
+					<ul>
+						<h3>2010</h3>
+						<li>Taller de Qlikview dictado por Federico Ferrara - Practia.</li>
+					</ul>
+					<br />
+					<ul>
+						<h3>2009</h3>
+						<li>Curso de Rational Functional Tester dictado por IBM.</li>
+						<li>
+							Curso de Metodología Scrum aplicado a Proyectos de Calidad Técnica
+							- Practia.
+						</li>
+					</ul>
+					<br />
+					<ul>
+						<h3>2008</h3>
+						<li>Curso de Administración de Proyectos de Software - Practia.</li>
+						<li>
+							Curso de Programación con Objetos dictado por Dan Rozenfarb -
+							Practia.
+						</li>
+					</ul>
+					<br />
+					<ul>
+						<h3>2006</h3>
+						<li>
+							Planificación de Proyectos y Estimación dictado por Practia.
+						</li>
+						<li>Taller de Estimación de Proyectos dictado por Practia.</li>
+					</ul>
+					<div id="fifthBlock" class="block"></div>
+				</section>
 
-            <h2 id="trainingTitle" class="set__hidden__title">Capacitación</h2>
-            <section id="training" class="training set__hidden__section">
-                <br>
-                <ul>
-                    <h3>2021</h3>
-                    <li>Full Stack Javascript Developer dictado por Camilo Montoya - Udemy.</li>
-                    <li>Desarrollo de juegos con Unreal Engine dictado por Carlos Coronado - Udemy.</li>
-                </ul>
-                <br>
-                <ul>
-                    <h3>2010</h3>
-                    <li>Taller de Qlikview dictado por Federico Ferrara - Practia.</li>
-                </ul>
-                <br>
-                <ul>
-                    <h3>2009</h3>
-                    <li>Curso de Rational Functional Tester dictado por IBM.</li>
-                    <li>Curso de Metodología Scrum aplicado a Proyectos de Calidad Técnica - Practia.</li>
-                </ul>
-                <br>
-                <ul>
-                    <h3>2008</h3>
-                    <li>Curso de Administración de Proyectos de Software - Practia.</li>
-                    <li>Curso de Programación con Objetos dictado por Dan Rozenfarb - Practia.</li>
-                </ul>
-                <br>
-                <ul>
-                    <h3>2006</h3>
-                    <li>Planificación de Proyectos y Estimación dictado por Practia.</li>
-                    <li>Taller de Estimación de Proyectos dictado por Practia.</li>
-                </ul>
-                <div id="fifthBlock" class="block"></div>
-            </section>
+				<h2 id="educationTitle" class="set__hidden__title">
+					Formación Académica
+				</h2>
+				<br />
+				<section id="education" class="education set__hidden__section">
+					<ul>
+						<li>
+							Tecnicatura en <br />
+							Seguridad Informática
+						</li>
+						<li>Universidad CAECE</li>
+						<li>Incompleto</li>
+					</ul>
+					<ul>
+						<li>Diseño Gráfico</li>
+						<li>Universidad de Buenos Aires</li>
+						<li>Incompleto</li>
+					</ul>
+					<ul>
+						<li>
+							Administración y <br />
+							Gestión de las Organizaciones
+						</li>
+						<li>Instituto Mariano Moreno de Lanús</li>
+						<li>Finalizado en el 2001. Promedio 8,80.</li>
+					</ul>
+				</section>
+			</div>
 
-            <h2 id="educationTitle" class="set__hidden__title">Formación Académica</h2>
-            <br>
-            <section id="education" class="education set__hidden__section">
-                <ul>
-                    <li>Tecnicatura en <br> Seguridad Informática</li>
-                    <li>Universidad CAECE</li>
-                    <li>Incompleto</li>
-                </ul>
-                <ul>
-                    <li>Diseño Gráfico</li>
-                    <li>Universidad de Buenos Aires</li>
-                    <li>Incompleto</li>
-                </ul>
-                <ul>
-                    <li>Administración y <br> Gestión de las Organizaciones</li>
-                    <li >Instituto Mariano Moreno de Lanús</li>
-                    <li>Finalizado en el 2001. Promedio 8,80.</li>
-                </ul>
-            </section>
-        </div>
+			<div class="mobile_resume-button"></div>
 
-    
-        <div class="mobile_resume-button"></div>
+			<div class="resume sticky appear">
+				<img src="/images/picture.png" class="face" />
+				<h1>Sergio Jakimenko</h1>
+				<h3>
+					Desarrollador <i class="fa fa-grip-lines-vertical"></i> Diseñador
+				</h3>
+				<h4>Buenos Aires - Argentina</h4>
+				<hr />
+				<p>
+					<a href="#" class="fa-brands fa-linkedin" title="LinkedIn"></a>
+					<a href="#" class="fa-brands fa-github-square" title="GitHub"></a>
+					<a href="#" class="fa-brands fa-facebook-square" title="Facebook"></a>
+					<a
+						href="#"
+						class="fa-brands fa-instagram-square"
+						title="Instagram"
+					></a>
+					<a href="#" class="fa-brands fa-twitter-square" title="Twitter"></a>
+				</p>
+				<p>
+					Teléfono: 11 3 621 7426
+					<br />
+					Email: serjak@gmail.com
+				</p>
+				<hr />
+				<p>Curriculum Vitae</p>
+				<hr />
+				<br />
+				<h3>Idiomas</h3>
+				<br />
+				<h4>Inglés</h4>
+				<div class="languageSkills">
+					<ul>
+						<li>Reading:</li>
+						<li>Writing:</li>
+						<li>Listening:</li>
+						<li>Speaking:</li>
+					</ul>
+					<ul>
+						<li>B2</li>
+						<li>B1</li>
+						<li>A2 - B1</li>
+						<li>A1</li>
+					</ul>
+				</div>
+				<br />
+				<h4>Español</h4>
+				<p>Lengua materna</p>
+				<hr />
+			</div>
+		</div>
 
-        <div class="resume sticky appear">
-            <img src="/images/picture.png" class="face">
-            <h1>Sergio Jakimenko</h1>
-            <h3>Desarrollador <i class="fa fa-grip-lines-vertical"></i> Diseñador</h3>
-            <h4>Buenos Aires - Argentina</h4>
-            <hr>
-            <p>
-                <a href="#" class="fa-brands fa-linkedin" title="LinkedIn"></a>
-                <a href="#" class="fa-brands fa-github-square" title="GitHub"></a>
-                <a href="#" class="fa-brands fa-facebook-square" title="Facebook"></a>
-                <a href="#" class="fa-brands fa-instagram-square" title="Instagram"></a>
-                <a href="#" class="fa-brands fa-twitter-square" title="Twitter"></a>
-            </p>
-            <p>
-                Teléfono: 11 3 621 7426
-                <br>
-                Email: serjak@gmail.com
-            </p>
-            <hr>
-            <p>
-                Curriculum Vitae
-            </p>
-            <hr>
-            <br>
-            <h3>Idiomas</h3>
-            <br>
-            <h4>Inglés</h4>
-            <div class="languageSkills">
-                <ul>
-                    <li>Reading:</li>
-                    <li>Writing:</li>
-                    <li>Listening:</li>
-                    <li>Speaking:</li>
-                </ul>
-                <ul>
-                    <li>B2</li>
-                    <li>B1</li>
-                    <li>A2 - B1</li>
-                    <li>A1</li>
-                </ul>
-            </div>
-            <br>
-            <h4>Español</h4>
-            <p>Lengua materna</p>
-            <hr>
-        </div>
-    </div>
-
-    <footer>
-        
-    </footer>
-
-</body>
+		<footer></footer>
+	</body>
 </html>
