@@ -35,7 +35,7 @@
 	</head>
 	<body>
 		<header>
-			<nav class="nav">
+			<nav class="nav" id="nav">
 				<a href="#" class="nav__home animate__animated animate__fadeInLeftBig"
 					><i class="fas fa-code"></i
 				></a>
@@ -50,12 +50,11 @@
 					<li class="nav__li__r"><a href="#">ES</a></li>
 					<li class="nav__li__r"><a href="#">EN</a></li>
 				</ul>
-			</nav>
 
-			<div class="nav__mobile">
-				<div class="nav__mobile-button"></div>
-				<i class="fas fa-bars"></i>
-			</div>
+				<a id="button-menu" class="nav__menu-mobile" class="icon">
+					<i class="fa fa-bars"></i>
+				</a>
+			</nav>
 
 			<hr
 				class="nav__bar animate__animated animate__zoomIn animate__delay-1s"
@@ -671,9 +670,15 @@
 				</section>
 			</div>
 
-			<div class="mobile_resume-button"></div>
+			<div class="mobile_sidebar-button">
+				<i
+					id="button-sidebar"
+					onclick="toggleSideBar()"
+					class="fas fa-caret-left sticky"
+				></i>
+			</div>
 
-			<div class="resume sticky appear">
+			<div id="sidebar" class="sidebar sticky">
 				<img src="/images/picture.png" class="face" />
 				<h1>Sergio Jakimenko</h1>
 				<h3>
