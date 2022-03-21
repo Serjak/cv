@@ -487,6 +487,14 @@ h2 {
 	top: 45%;
 }
 
+.nav__mobile-hidden {
+	display: none;
+}
+
+.nav__mobile-visible {
+	display: none;
+}
+
 @media screen and (max-width: 865px) {
 	.header-quote .quote {
 		font-size: 1.6em;
@@ -504,16 +512,18 @@ h2 {
 		display: none;
 		background-color: #000000;
 		background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23004c6c' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-		position: absolute;
+		position: fixed;
 		width: 350px;
-		left: 0;
-		right: 0;
-		top: 0;
+		/* left: 0;
+		right: 0; */
+		top: 60px;
 		margin-top: 0;
-		margin-left: auto;
-		margin-right: auto;
-		z-index: 1;
+		/* margin-left: auto;
+		margin-right: auto; */
+		z-index: 98;
 		animation: opacityAnim 1s;
+		left: 50%;
+		margin-left: -175px;
 	}
 
 	.sidebar h1 {
@@ -549,6 +559,26 @@ h2 {
 
 	.nav__menu {
 		display: none;
+	}
+
+	.nav__mobile-hidden {
+		display: none;
+		background-color: #000000;
+		background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23004c6c' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+		text-align: right;
+		position: fixed;
+		right: 0;
+		z-index: 99;
+	}
+
+	.nav__mobile-visible {
+		display: inline;
+		background-color: #000000;
+		background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23004c6c' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+		text-align: right;
+		position: fixed;
+		right: 0;
+		z-index: 99;
 	}
 
 	.nav__menu-right {

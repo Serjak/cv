@@ -82,6 +82,10 @@ window.addEventListener("scroll", function () {
 });
 
 window.addEventListener("touchmove", function () {
+	const sidebar = document.getElementById("sidebar");
+	document
+		.getElementById("navMobile-menu")
+		.classList.remove("nav__mobile-visible");
 	if (sidebar.style.display === "unset") {
 		document
 			.getElementById("button-sidebar")
@@ -97,8 +101,8 @@ function onClick(element) {
 }
 
 function toggleSideBar() {
-	sidebar = document.getElementById("sidebar");
-	sidebarButton = document.getElementById("button-sidebar");
+	const sidebar = document.getElementById("sidebar");
+	const sidebarButton = document.getElementById("button-sidebar");
 	if (sidebar.style.display === "unset") {
 		sidebarButton.classList.remove("fa-caret-right");
 		sidebarButton.classList.add("fa-caret-left");
@@ -110,18 +114,13 @@ function toggleSideBar() {
 	}
 }
 
-const toggleButton = document.getElementById("button-menu");
-const navWrapper = document.getElementById("nav");
+function mobileMenu() {
+	const navMobileMenu = document.getElementById("navMobile-menu");
+	navMobileMenu.classList.toggle("nav__mobile-visible");
+}
 
-toggleButton.addEventListener("touchstart", () => {
-	document.getElementById("button-menu").style.display = "none";
-	toggleButton.classList.toggle("close");
-	navWrapper.classList.toggle("show");
-});
-
-navWrapper.addEventListener("click", (e) => {
-	if (e.target.id === "nav") {
-		navWrapper.classList.remove("show");
-		toggleButton.classList.remove("close");
-	}
-});
+function hideMenu() {
+	document
+		.getElementById("navMobile-menu")
+		.classList.remove("nav__mobile-visible");
+}

@@ -51,7 +51,12 @@
 					<li class="nav__li__r"><a href="#">EN</a></li>
 				</ul>
 
-				<a id="button-menu" class="nav__menu-mobile" class="icon">
+				<a
+					id="button-menu"
+					class="nav__menu-mobile"
+					class="icon"
+					onclick="mobileMenu()"
+				>
 					<i class="fa fa-bars"></i>
 				</a>
 			</nav>
@@ -60,6 +65,29 @@
 				class="nav__bar animate__animated animate__zoomIn animate__delay-1s"
 			/>
 		</header>
+
+		<div>
+			<ul
+				id="navMobile-menu"
+				class="nav__mobile-hidden animate__animated animate__slideInDown animate__faster"
+			>
+				<li class="nav__li">
+					<a onclick="hideMenu()" href="#firstBlock">Experiencia</a>
+				</li>
+				<li class="nav__li">
+					<a onclick="hideMenu()" href="#secondBlock">Proyectos</a>
+				</li>
+				<li class="nav__li">
+					<a onclick="hideMenu()" href="#thirdBlock">Conocimientos</a>
+				</li>
+				<li class="nav__li">
+					<a onclick="hideMenu()" href="#fourthBlock">Capacitación</a>
+				</li>
+				<li class="nav__li">
+					<a onclick="hideMenu()" href="#fifthBlock">Formación</a>
+				</li>
+			</ul>
+		</div>
 
 		<div class="container">
 			<div
