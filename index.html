@@ -21,7 +21,7 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 		/>
 		<!-- css -->
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="./styles.css" />
 		<!-- google fonts Lato -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,25 +31,73 @@
 		/>
 		<!-- others -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="main.js"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/langtranslate.js"></script>
 	</head>
 	<body>
 		<header>
 			<nav class="nav" id="nav">
-				<a href="#" class="nav__home animate__animated animate__fadeInLeftBig"
+				<a
+					href="#"
+					class="nav__home animate__animated animate__fadeInLeftBig"
+					onclick="resetMenuButtons()"
 					><i class="fas fa-code"></i
 				></a>
 				<ul class="nav__menu animate__animated animate__fadeInDown">
-					<li class="nav__li"><a href="#firstBlock">Experiencia</a></li>
-					<li class="nav__li"><a href="#secondBlock">Proyectos</a></li>
-					<li class="nav__li"><a href="#thirdBlock">Conocimientos</a></li>
-					<li class="nav__li"><a href="#fourthBlock">Capacitación</a></li>
-					<li class="nav__li"><a href="#fifthBlock">Formación</a></li>
+					<li lang="es" class="nav__li">
+						<a
+							class="nav__menu-button"
+							href="#lgExperienceTitle"
+							id="lgExperienceButton"
+							>Experiencia</a
+						>
+					</li>
+					<li lang="es" class="nav__li">
+						<a
+							class="nav__menu-button"
+							href="#lgProjectsTitle"
+							id="lgProjectButton"
+							>Proyectos</a
+						>
+					</li>
+					<li lang="es" class="nav__li">
+						<a
+							class="nav__menu-button"
+							href="#lgSkillsTitle"
+							id="lgSkillsButton"
+							>Conocimientos</a
+						>
+					</li>
+					<li lang="es" class="nav__li">
+						<a
+							class="nav__menu-button"
+							href="#lgTrainingTitle"
+							id="lgTrainingButton"
+							>Capacitación</a
+						>
+					</li>
+					<li lang="es" class="nav__li">
+						<a
+							class="nav__menu-button"
+							href="#lgEducationTitle"
+							id="lgEducationButton"
+							>Formación</a
+						>
+					</li>
 				</ul>
-				<ul class="nav__menu-right animate__animated animate__fadeInRightBig">
-					<li class="nav__li__r"><a href="#">ES</a></li>
-					<li class="nav__li__r"><a href="#">EN</a></li>
-				</ul>
+
+				<div class="nav__menu-right">
+					<figure class="language-flags">
+						<a href="#" onclick="language('es')"
+							><img class="flag" src="./images/es.png"
+						/></a>
+					</figure>
+					<figure class="language-flags">
+						<a href="#" onclick="language('en')"
+							><img class="flag" src="./images/en.png"
+						/></a>
+					</figure>
+				</div>
 
 				<a
 					id="button-menu"
@@ -72,19 +120,29 @@
 				class="nav__mobile-hidden animate__animated animate__slideInDown animate__faster"
 			>
 				<li class="nav__li">
-					<a onclick="hideMenu()" href="#firstBlock">Experiencia</a>
+					<a onclick="hideMenu()" href="#firstBlock" id="lgExperienceButtonM"
+						>Experiencia</a
+					>
 				</li>
 				<li class="nav__li">
-					<a onclick="hideMenu()" href="#secondBlock">Proyectos</a>
+					<a onclick="hideMenu()" href="#secondBlock" id="lgProjectButtonM"
+						>Proyectos</a
+					>
 				</li>
 				<li class="nav__li">
-					<a onclick="hideMenu()" href="#thirdBlock">Conocimientos</a>
+					<a onclick="hideMenu()" href="#thirdBlock" id="lgSkillsButtonM"
+						>Conocimientos</a
+					>
 				</li>
 				<li class="nav__li">
-					<a onclick="hideMenu()" href="#fourthBlock">Capacitación</a>
+					<a onclick="hideMenu()" href="#fourthBlock" id="lgTrainingButtonM"
+						>Capacitación</a
+					>
 				</li>
 				<li class="nav__li">
-					<a onclick="hideMenu()" href="#fifthBlock">Formación</a>
+					<a onclick="hideMenu()" href="#fifthBlock" id="lgEducationButtonM"
+						>Formación</a
+					>
 				</li>
 			</ul>
 		</div>
@@ -112,84 +170,100 @@
 				</div>
 
 				<section id="about" class="about">
-					<h2 id="aboutTitle">Acerca de mí</h2>
+					<h2 id="lgAboutTitle">Acerca de mí</h2>
+					<div class="block"></div>
 					<br />
-					<p>
+					<p id="lgAboutOne">
 						Mi mundo es la tecnología, he intentado muchas cosas pero siempre me
 						mantuve en la misma línea, el diseño y la tecnología.
-						<br />
+					</p>
+					<p id="lgAboutTwo">
 						Soy programador full stack, me gusta el backend, me encanta el
 						frontend, fui tester, fui analista, a lo largo de mi vida pasé por
 						la mayor parte de roles que le dan vida a un software.
-						<br />
+					</p>
+					<p id="lgAboutThree">
 						Mi fanatismo por la tecnología me hizo ir mas lejos cuando adquirí
 						mi primera Impresora 3D, no pasó mucho tiempo para que me arme una
 						segunda, esta vez de cero, y despues cuando creía que el plástico no
 						me alcanzaba, adquirí un cnc para madera y me sumergí también en
 						algo de carpintería.
-						<br />
+					</p>
+					<p id="lgAboutFour">
 						Es algo que me apasiona pero jamás optaría por llevarlo a mi mundo
 						laboral, porque lo mío son las computadoras, el código, el diseño.
-						<br />
+					</p>
+					<p id="lgAboutFive">
 						Como gamer de la vieja escuela también jugué bastante, pero me di
 						cuenta que no jugaba, sino que constantemente le prestaba atención a
 						cómo estaban hechos los juegos, a sus errores, a sus aciertos, por
 						eso también comencé a desarrollar mis propios juegos.
 					</p>
 					<br /><br />
-					<h3>Soy determinado</h3>
+					<h3 id="lgAboutSix">Soy determinado</h3>
 					<br />
 					<ul>
-						<li>De toda la vida siempre fui un solucionador de problemas.</li>
-						<li>
+						<li id="lgAboutSeven">
+							De toda la vida siempre fui un solucionador de problemas.
+						</li>
+						<li id="lgAboutEight">
 							Tengo facilidad para encontrar soluciones, aún de temas que no
 							conozco.
 						</li>
-						<li>
+						<li id="lgAboutNine">
 							Me gusta aprender cosas nuevas, es por ello que mis conocimientos
 							son muy diversos.
 						</li>
-						<li>
+						<li id="lgAboutTen">
 							Me considero un emprendedor, tanto dentro como fuera de una
 							empresa.
 						</li>
 					</ul>
 					<br /><br />
-					<h3>Entusiasta</h3>
+					<h3 id="lgAboutEleven">Entusiasta</h3>
 					<br />
 					<ul>
-						<li>
+						<li id="lgAboutTwelve">
 							No hay nada mas lindo que ver proyectos realizados, por eso
 							siempre doy todo de mí para que esto se cumpla.
 						</li>
-						<li>
+						<li id="lgAboutThirteen">
 							Considero tener la capacidad para transformar las cosas para bien.
 						</li>
 					</ul>
-					<div id="firstBlock" class="block"></div>
+					<div class="block"></div>
 				</section>
 
-				<h2 id="experienceTitle" class="set__hidden__title">
+				<h2 id="lgExperienceTitle" class="set__hidden__title">
 					Experiencia Laboral
 				</h2>
+				<div id="firstBlock" class="block"></div>
 				<section id="experience" class="experience set__hidden__section">
 					<br />
 					<article class="episode">
 						<div class="episode__number">2013 - 2021</div>
 						<div class="episode__content">
-							<div class="title">Banco Credicoop Programador Senior</div>
+							<div class="title" id="lgJobTitle1">
+								Banco Credicoop Programador Senior
+							</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Me desempeñé como programador en Infobasic
-									para el sistema core del banco. Estuve a cargo del desarrollo
-									de la mayoría de los web services utilizados y la gestión en
-									la comunicación con el resto de los sistemas (ESB, sistemas
-									internos, Coelsa, Link, entre otros).
+									<u id="lgJobResumeTitle">Resumen</u>:
+									<span id="lgJobResume1"
+										>Me desempeñé como programador en Infobasic para el sistema
+										core del banco. Estuve a cargo del desarrollo de la mayoría
+										de los web services utilizados y la gestión en la
+										comunicación con el resto de los sistemas (ESB, sistemas
+										internos, Coelsa, Link, entre otros).</span
+									>
 								</p>
 								<br />
 								<p>
-									<u>Proyectos</u>: Crecer XXI - Core Bancario (Temenos T24 Core
-									Banking)
+									<u id="lgJobProjectTitle">Proyectos</u>:
+									<span id="lgJobProject1"
+										>Crecer XXI - Core Bancario (Temenos T24 Core
+										Banking).</span
+									>
 								</p>
 								<br />
 								<img
@@ -203,17 +277,24 @@
 					<article class="episode">
 						<div class="episode__number">2010 - 2013</div>
 						<div class="episode__content">
-							<div class="title">Banco Credicoop Analista Técnico</div>
+							<div class="title" id="lgJobTitle2">
+								Banco Credicoop Analista Técnico
+							</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Participé en el análisis de toda la
-									documentación funcional previo al desarrollo del sistema
-									Crecer XXI (core bancario) y su migración desde mainframe.
-									Revisé los aspectos técnicos de las soluciones funcionales
-									propuestas.
+									<u id="lgJobResumeTitle">Resumen</u>:
+									<span id="lgJobResume2"
+										>Participé en el análisis de toda la documentación funcional
+										previo al desarrollo del sistema Crecer XXI (core bancario)
+										y su migración desde mainframe. Revisé los aspectos técnicos
+										de las soluciones funcionales propuestas.</span
+									>
 								</p>
 								<br />
-								<p><u>Proyectos</u>: Crecer XXI - Migración.</p>
+								<p>
+									<u id="lgJobProjectTitle">Proyectos</u>:
+									<span id="lgJobProject2">Crecer XXI - Migración.</span>
+								</p>
 								<br />
 								<img
 									class="client_logo"
@@ -226,19 +307,29 @@
 					<article class="episode">
 						<div class="episode__number">2006 - 2010</div>
 						<div class="episode__content">
-							<div class="title">Practia Consultores Tester Técnico</div>
+							<div class="title" id="lgJobTitle3">
+								Practia Consultores Tester Técnico
+							</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Trabajé mayormente con la herramienta Apache
-									JMeter para desarrollo y ejecución de pruebas de performance,
-									estrés y escalabilidad. Y utilicé la herramienta QlikView para
-									el análisis de los resultados y realización de gráficos para
-									presentar los informes. Del 2008 al 2010 estuve a cargo de 2
-									personas liderando el proyecto de pruebas técnicas en el Banco
-									Credicoop.
+									<u id="lgJobResumeTitle">Resumen</u>:
+									<span id="lgJobResume3"
+										>Trabajé mayormente con la herramienta Apache JMeter para
+										desarrollo y ejecución de pruebas de performance, estrés y
+										escalabilidad. Y utilicé la herramienta QlikView para el
+										análisis de los resultados y realización de gráficos para
+										presentar los informes. Del 2008 al 2010 estuve a cargo de 2
+										personas liderando el proyecto de pruebas técnicas en el
+										Banco Credicoop.</span
+									>
 								</p>
 								<br />
-								<p><u>Clientes</u>: Telefónica Argentina - Banco Credicoop</p>
+								<p>
+									<u id="lgJobClientTitle">Clientes</u>:
+									<span id="lgJobClient1"
+										>Telefónica Argentina - Banco Credicoop</span
+									>
+								</p>
 								<br />
 								<img
 									class="client_logo"
@@ -256,17 +347,25 @@
 					<article class="episode">
 						<div class="episode__number">2004 - 2006</div>
 						<div class="episode__content">
-							<div class="title">Practia Consultores Tester Manual</div>
+							<div class="title" id="lgJobTitle4">
+								Practia Consultores Tester Manual
+							</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Diseñé y ejecuté casos de prueba para
-									distintos clientes.
+									<u id="lgJobResumeTitle">Resumen</u>:
+									<span id="lgJobResume4"
+										>Diseñé y ejecuté casos de prueba para distintos
+										clientes.</span
+									>
 								</p>
 								<br />
 								<p>
-									<u>Clientes</u>: Sodexho Chile (actualmente Sodexo), Nextel,
-									Telefónica Argentina, Movistar Argentina, Tenaris, Exiros,
-									Santander México.
+									<u id="lgJobClientTitle">Clientes</u>:
+									<span id="lgJobClient2"
+										>Sodexho Chile (actualmente Sodexo), Nextel, Telefónica
+										Argentina, Movistar Argentina, Tenaris, Exiros, Santander
+										México.</span
+									>
 								</p>
 								<br />
 								<img
@@ -307,25 +406,34 @@
 							</div>
 						</div>
 					</article>
-					<div id="secondBlock" class="block"></div>
+					<div class="block"></div>
 				</section>
 
-				<h2 id="projectsTitle" class="set__hidden__title">Otros Proyectos</h2>
+				<h2 id="lgProjectsTitle" class="set__hidden__title">Otros Proyectos</h2>
+				<div id="secondBlock" class="block"></div>
 				<section id="projects" class="projects set__hidden__section">
 					<br />
 					<article class="episode">
-						<div class="episode__number">2021 - En progreso</div>
+						<div id="lgProjectYears" class="episode__number">
+							2021 - En progreso
+						</div>
 						<div class="episode__content">
-							<div class="title">Proyecto personal</div>
+							<div id="lgProjectTitle1" class="title">Proyecto personal</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Me encuentro diseñando un juego con el motor
-									Unreal Engine 4.
+									<u id="lgResumeTitle">Resumen</u>:
+									<span id="lgProjectResume1"
+										>Me encuentro diseñando un juego con el motor Unreal Engine
+										4.</span
+									>
 								</p>
 								<br />
 								<p>
-									<u>Detalles</u>: Juego en primera persona, estilo escape room
-									con puzzles, trampas y enemigos
+									<u id="lgProyectsDetails">Detalles</u>:
+									<span id="lgProjectDetails1"
+										>Juego en primera persona, estilo escape room con puzzles,
+										trampas y enemigos</span
+									>
 								</p>
 							</div>
 						</div>
@@ -333,20 +441,26 @@
 					<article class="episode">
 						<div class="episode__number">2010</div>
 						<div class="episode__content">
-							<div class="title">Dictado de curso</div>
+							<div id="lgProjectTitle2" class="title">Dictado de curso</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Dicté un curso de pruebas técnicas en Practia
-									Consultores.
+									<u id="lgResumeTitle">Resumen</u>:
+									<span id="lgProjectResume2"
+										>Dicté un curso de pruebas técnicas en Practia
+										Consultores.</span
+									>
 								</p>
 								<br />
 								<p>
-									<u>Detalles</u>: El curso consistió en mostrar una
-									introducción a las pruebas técnicas, mostrando casos testigos
-									de los trabajos realizados hasta el momento.
+									<u id="lgProyectsDetails">Detalles</u>:
+									<span id="lgProjectDetails2"
+										>El curso consistió en mostrar una introducción a las
+										pruebas técnicas, mostrando casos testigos de los trabajos
+										realizados hasta el momento.</span
+									>
 								</p>
 								<br />
-								<p><u>Muestras</u>:</p>
+								<p><u id="lgProyectsSampleTitle">Muestras</u>:</p>
 								<br />
 								<div class="gallery">
 									<div class="gallery__item">
@@ -398,25 +512,34 @@
 					<article class="episode">
 						<div class="episode__number">2010</div>
 						<div class="episode__content">
-							<div class="title">Dictado de taller</div>
+							<div id="lgProjectTitle3" class="title">Dictado de taller</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Realicé un taller de automatización funcional
-									para personal de Practia Consultores.
+									<u id="lgResumeTitle">Resumen</u>:
+									<span id="lgProjectResume3"
+										>Realicé un taller de automatización funcional para personal
+										de Practia Consultores.</span
+									>
 								</p>
 								<br />
 								<p>
-									<u>Detalles</u>: En el taller di un panorama de qué es la
-									automatización de pruebas, cuando se aconseja utilizarlo y
-									explicar porqué no es un reemplazo del testing manual.
+									<u id="lgProyectsDetails">Detalles</u>:
+									<span id="lgProjectDetails3"
+										>En el taller di un panorama de qué es la automatización de
+										pruebas, cuando se aconseja utilizarlo y explicar porqué no
+										es un reemplazo del testing manual.</span
+									>
 								</p>
 								<p>
-									Seguido a esto enseñé cómo automatizar algunas pruebas (login
-									y completar un formulario). Esto se realizó con Ruby y la
-									librería Watir (reemplazada por Selenium actualmente).
+									<span id="lgProjectDetails3b"
+										>Seguido a esto enseñé cómo automatizar algunas pruebas
+										(login y completar un formulario). Esto se realizó con Ruby
+										y la librería Watir (reemplazada por Selenium
+										actualmente).</span
+									>
 								</p>
 								<br />
-								<p><u>Muestras</u>:</p>
+								<p><u id="lgProyectsSampleTitle">Muestras</u>:</p>
 								<br />
 								<div class="gallery">
 									<div class="gallery__item">
@@ -462,8 +585,11 @@
 										/>
 									</div>
 									<p>
-										<u>Nota</u>: no se muestra lo automatizado en el taller
-										debido a que el uso de Watir está deprecado actualmente.
+										<u id="lgProyectsNoteTitle">Nota</u>:
+										<span id="lgNoteDesc"
+											>No se muestra lo automatizado en el taller debido a que
+											el uso de Watir está deprecado actualmente.</span
+										>
 									</p>
 								</div>
 							</div>
@@ -472,19 +598,25 @@
 					<article class="episode">
 						<div class="episode__number">2009</div>
 						<div class="episode__content">
-							<div class="title">Dictado de taller</div>
+							<div id="lgProjectTitle4" class="title">Dictado de taller</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Por tareas compartidas tuve que dictar un
-									taller sobre el uso de la herramienta HP Quality Center a
-									personal de Teléfonica de Argentina.
+									<u id="lgResumeTitle">Resumen</u>:
+									<span id="lgProjectResume4"
+										>Por tareas compartidas tuve que dictar un taller sobre el
+										uso de la herramienta HP Quality Center a personal de
+										Teléfonica de Argentina.</span
+									>
 								</p>
 								<br />
 								<p>
-									<u>Detalles</u>: Prioricé la explicación sobre el flujo de
-									trabajo en la herramienta, desde la ejecución de casos de
-									prueba, reporte de incidentes, cambios de estado de los mismos
-									y generación de reportes.
+									<u id="lgProyectsDetails">Detalles</u>:
+									<span id="lgProjectDetails4"
+										>Prioricé la explicación sobre el flujo de trabajo en la
+										herramienta, desde la ejecución de casos de prueba, reporte
+										de incidentes, cambios de estado de los mismos y generación
+										de reportes.</span
+									>
 								</p>
 							</div>
 						</div>
@@ -492,35 +624,47 @@
 					<article class="episode">
 						<div class="episode__number">2009</div>
 						<div class="episode__content">
-							<div class="title">Armado de Maqueta</div>
+							<div id="lgProjectTitle5" class="title">Armado de Maqueta</div>
 							<div class="story">
 								<p>
-									<u>Resumen</u>: Armé una maqueta demo de presentación de la
-									suite HP Quality Center para presentar en Movistar.
+									<u id="lgResumeTitle">Resumen</u>:
+									<span id="lgProjectResume5"
+										>Armé una demo de presentación de la suite HP Quality Center
+										para presentar en Movistar.</span
+									>
 								</p>
 								<br />
 								<p>
-									<u>Detalles</u>: El cliente Movistar estaba interesado en
-									adquirir un set de herramientas para abarcar todas las tareas
-									del área de QA, esto incluía generación de casos de pruebas,
-									reporte de incidentes, generación de reportes y gráficos.
+									<u id="lgProyectsDetails">Detalles</u>:
+									<span id="lgProjectDetails5"
+										>El cliente Movistar estaba interesado en adquirir un set de
+										herramientas para abarcar todas las tareas del área de QA,
+										esto incluía generación de casos de pruebas, reporte de
+										incidentes, generación de reportes y gráficos.</span
+									>
 								</p>
 								<p>
-									Además querían adquirir también software HP Quick Test Pro
-									para la automatización de pruebas funcionales.
+									<span id="lgProjectDetails5b"
+										>Además querían adquirir también software HP Quick Test Pro
+										para la automatización de pruebas funcionales.</span
+									>
 								</p>
 								<p>
-									Para esto mi tarea fue realizar una demo completa de todas las
-									etapas de un proyecto de QA dentro del cliente y
-									automatización de un ABM básico del portal de Movistar.
+									<span id="lgProjectDetails5c"
+										>Para esto mi tarea fue realizar una demo completa de todas
+										las etapas de un proyecto de QA dentro del cliente y
+										automatización de un ABM básico del portal de
+										Movistar.</span
+									>
 								</p>
 							</div>
 						</div>
 					</article>
-					<div id="thirdBlock" class="block"></div>
+					<div class="block"></div>
 				</section>
 
-				<h2 id="skillsTitle" class="set__hidden__title">Conocimientos</h2>
+				<h2 id="lgSkillsTitle" class="set__hidden__title">Conocimientos</h2>
+				<div id="thirdBlock" class="block"></div>
 				<section id="skills" class="skills set__hidden__section">
 					<br />
 					<div class="soft-raiting" id="skillsContainer">
@@ -618,19 +762,20 @@
 							softRaiting("Qlikview", 3);
 						</script>
 					</div>
-					<div id="fourthBlock" class="block"></div>
+					<div class="block"></div>
 				</section>
 
-				<h2 id="trainingTitle" class="set__hidden__title">Capacitación</h2>
+				<h2 id="lgTrainingTitle" class="set__hidden__title">Capacitación</h2>
+				<div id="fourthBlock" class="block"></div>
 				<section id="training" class="training set__hidden__section">
 					<br />
 					<ul>
 						<h3>2021</h3>
-						<li>
+						<li id="lgTraining1">
 							Full Stack Javascript Developer dictado por Camilo Montoya -
 							Udemy.
 						</li>
-						<li>
+						<li id="lgTraining2">
 							Desarrollo de juegos con Unreal Engine dictado por Carlos Coronado
 							- Udemy.
 						</li>
@@ -638,13 +783,17 @@
 					<br />
 					<ul>
 						<h3>2010</h3>
-						<li>Taller de Qlikview dictado por Federico Ferrara - Practia.</li>
+						<li id="lgTraining3">
+							Taller de Qlikview dictado por Federico Ferrara - Practia.
+						</li>
 					</ul>
 					<br />
 					<ul>
 						<h3>2009</h3>
-						<li>Curso de Rational Functional Tester dictado por IBM.</li>
-						<li>
+						<li id="lgTraining4">
+							Curso de Rational Functional Tester dictado por IBM.
+						</li>
+						<li id="lgTraining5">
 							Curso de Metodología Scrum aplicado a Proyectos de Calidad Técnica
 							- Practia.
 						</li>
@@ -652,8 +801,10 @@
 					<br />
 					<ul>
 						<h3>2008</h3>
-						<li>Curso de Administración de Proyectos de Software - Practia.</li>
-						<li>
+						<li id="lgTraining6">
+							Curso de Administración de Proyectos de Software - Practia.
+						</li>
+						<li id="lgTraining7">
 							Curso de Programación con Objetos dictado por Dan Rozenfarb -
 							Practia.
 						</li>
@@ -661,39 +812,44 @@
 					<br />
 					<ul>
 						<h3>2006</h3>
-						<li>
+						<li id="lgTraining8">
 							Planificación de Proyectos y Estimación dictado por Practia.
 						</li>
-						<li>Taller de Estimación de Proyectos dictado por Practia.</li>
+						<li id="lgTraining9">
+							Taller de Estimación de Proyectos dictado por Practia.
+						</li>
 					</ul>
-					<div id="fifthBlock" class="block"></div>
+					<div class="block"></div>
 				</section>
 
-				<h2 id="educationTitle" class="set__hidden__title">
+				<h2 id="lgEducationTitle" class="set__hidden__title">
 					Formación Académica
 				</h2>
+				<div id="fifthBlock" class="block"></div>
 				<br />
 				<section id="education" class="education set__hidden__section">
 					<ul>
-						<li>
-							Tecnicatura en <br />
-							Seguridad Informática
-						</li>
-						<li>Universidad CAECE</li>
-						<li>Incompleto</li>
+						<li id="lgEducationTitle1">Tecnicatura en Seguridad Informática</li>
+						<li id="lgEducationPlace1" class="place">Universidad CAECE</li>
+						<li id="lgEducationFinish1" class="finish">Incompleto</li>
 					</ul>
 					<ul>
-						<li>Diseño Gráfico</li>
-						<li>Universidad de Buenos Aires</li>
-						<li>Incompleto</li>
+						<li id="lgEducationTitle2">Diseño Gráfico</li>
+						<li id="lgEducationPlace2" class="place">
+							Universidad de Buenos Aires
+						</li>
+						<li id="lgEducationFinish2" class="finish">Incompleto</li>
 					</ul>
 					<ul>
-						<li>
-							Administración y <br />
-							Gestión de las Organizaciones
+						<li id="lgEducationTitle3">
+							Administración y Gestión de las Organizaciones
 						</li>
-						<li>Instituto Mariano Moreno de Lanús</li>
-						<li>Finalizado en el 2001. Promedio 8,80.</li>
+						<li id="lgEducationPlace3" class="place">
+							Instituto Mariano Moreno de Lanús
+						</li>
+						<li id="lgEducationFinish3" class="finish">
+							Finalizado en el 2001 - Promedio 8,80
+						</li>
 					</ul>
 				</section>
 			</div>
@@ -709,12 +865,10 @@
 			<div id="sidebar" class="sidebar sticky">
 				<img src="/images/picture.png" class="face" />
 				<h1>Sergio Jakimenko</h1>
-				<h3>
-					Desarrollador <i class="fa fa-grip-lines-vertical"></i> Diseñador
-				</h3>
+				<h3 id="lgWorkArea">Desarrollador || Diseñador</h3>
 				<h4>Buenos Aires - Argentina</h4>
 				<hr />
-				<p>
+				<p class="socialNetworks">
 					<a href="#" class="fa-brands fa-linkedin" title="LinkedIn"></a>
 					<a href="#" class="fa-brands fa-github-square" title="GitHub"></a>
 					<a href="#" class="fa-brands fa-facebook-square" title="Facebook"></a>
@@ -726,7 +880,7 @@
 					<a href="#" class="fa-brands fa-twitter-square" title="Twitter"></a>
 				</p>
 				<p>
-					Teléfono: 11 3 621 7426
+					<span id="lgCellPhone">Teléfono</span>: 11 3 621 7426
 					<br />
 					Email: serjak@gmail.com
 				</p>
@@ -734,9 +888,9 @@
 				<p>Curriculum Vitae</p>
 				<hr />
 				<br />
-				<h3>Idiomas</h3>
+				<h3 id="lgLangs">Idiomas</h3>
 				<br />
-				<h4>Inglés</h4>
+				<h4 id="lgLangEnglish">Inglés</h4>
 				<div class="languageSkills">
 					<ul>
 						<li>Reading:</li>
@@ -752,8 +906,8 @@
 					</ul>
 				</div>
 				<br />
-				<h4>Español</h4>
-				<p>Lengua materna</p>
+				<h4 id="lgLangSpanish">Español</h4>
+				<p id="lgLangNative">Lengua nativa</p>
 				<hr />
 			</div>
 		</div>
@@ -761,3 +915,4 @@
 		<footer></footer>
 	</body>
 </html>
+<script src="./js/listeners.js"></script>

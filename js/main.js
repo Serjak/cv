@@ -1,12 +1,12 @@
 // Mobile Menu Toggle Button JavaScript
-function myFunction() {
-	let x = document.getElementById("mobile-menu");
-	if (x.style.display === "none") {
-		x.style.display = "block";
-	} else {
-		x.style.display = "none";
-	}
-}
+// function myFunction() {
+// 	let x = document.getElementById("mobile-menu");
+// 	if (x.style.display === "none") {
+// 		x.style.display = "block";
+// 	} else {
+// 		x.style.display = "none";
+// 	}
+// }
 
 function between(x, min, max) {
 	return x >= min && x <= max;
@@ -54,46 +54,6 @@ function softRaiting(appName, stars, altText) {
 	}
 	document.getElementById("skillsContainer").appendChild(divElement);
 }
-
-window.addEventListener("scroll", function () {
-	let elements = document.getElementsByClassName("set__hidden__section");
-	let elementsTitle = document.getElementsByClassName("set__hidden__title");
-	let screenSize = window.innerHeight;
-
-	for (var i = 0; i < elementsTitle.length; i++) {
-		let element = elementsTitle[i];
-
-		if (element.getBoundingClientRect().top < screenSize) {
-			element.classList.add("visible");
-		} else {
-			element.classList.remove("visible");
-		}
-	}
-
-	for (var i = 0; i < elements.length; i++) {
-		let element = elements[i];
-
-		if (element.getBoundingClientRect().top < screenSize) {
-			element.classList.add("visible");
-		} else {
-			element.classList.remove("visible");
-		}
-	}
-});
-
-window.addEventListener("touchmove", function () {
-	const sidebar = document.getElementById("sidebar");
-	document
-		.getElementById("navMobile-menu")
-		.classList.remove("nav__mobile-visible");
-	if (sidebar.style.display === "unset") {
-		document
-			.getElementById("button-sidebar")
-			.classList.remove("fa-caret-right");
-		document.getElementById("button-sidebar").classList.add("fa-caret-left");
-		sidebar.style.display = "none";
-	}
-});
 
 function onClick(element) {
 	document.getElementById("modal__img").src = element.src;

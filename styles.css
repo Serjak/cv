@@ -124,11 +124,20 @@ h2 {
 }
 
 .nav__menu-right {
-	font-size: 0.9em;
 	display: flex;
 	height: 60px;
 	align-items: center;
 	margin-left: auto;
+}
+
+.nav__menu a:hover {
+	font-weight: 600;
+}
+
+.nav__menu .active {
+	background-color: #008a8a;
+	opacity: 0.7;
+	border-radius: 5px;
 }
 
 .nav__li {
@@ -139,12 +148,14 @@ h2 {
 	padding: 6px;
 }
 
-.nav__li__r {
-	padding: 10px;
+.flag {
+	width: 40px;
+	padding: 5px;
+	filter: brightness(70%);
 }
 
-.nav__li a:hover {
-	border-bottom: 2px solid #fff;
+.language-flags :hover {
+	filter: brightness(100%);
 }
 
 /* Body */
@@ -270,7 +281,7 @@ h2 {
 }
 
 .checked {
-	color: darkcyan;
+	color: #008a8a;
 }
 
 .app-name {
@@ -430,12 +441,12 @@ h2 {
 	width: 200px;
 	border-radius: 50%;
 	shape-outside: circle();
-	border: 2px solid darkcyan;
+	border: 2px solid #008a8a;
 }
 
 .sidebar h1 {
 	margin: 15px 0px;
-	font-size: 1.8px;
+	font-size: 1.8em;
 }
 
 .sidebar h3 {
@@ -449,21 +460,21 @@ h2 {
 }
 
 .sidebar h3 .fa {
-	color: darkcyan;
+	color: #008a8a;
 }
 
 .sidebar p {
 	margin: 15px 0px;
 }
 
-.sidebar p :first-child {
-	color: darkcyan;
-	font-size: 1.4em;
+.socialNetworks {
+	color: #008a8a;
+	font-size: 1.2em;
 	padding-left: 0px;
 }
 
 .sidebar p a {
-	color: darkcyan;
+	color: #008a8a;
 	font-size: 1.4em;
 	padding-left: 10px;
 }
@@ -493,6 +504,14 @@ h2 {
 
 .nav__mobile-visible {
 	display: none;
+}
+
+.place {
+	color: #b6b6b6;
+}
+
+.finish {
+	color: #868686;
 }
 
 @media screen and (max-width: 865px) {
@@ -582,7 +601,7 @@ h2 {
 	}
 
 	.nav__menu-right {
-		font-size: 1.2em;
+		font-size: 1.5em;
 		display: flex;
 		height: 60px;
 		align-items: center;
