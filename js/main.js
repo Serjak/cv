@@ -1,13 +1,3 @@
-// Mobile Menu Toggle Button JavaScript
-// function myFunction() {
-// 	let x = document.getElementById("mobile-menu");
-// 	if (x.style.display === "none") {
-// 		x.style.display = "block";
-// 	} else {
-// 		x.style.display = "none";
-// 	}
-// }
-
 function between(x, min, max) {
 	return x >= min && x <= max;
 }
@@ -21,7 +11,15 @@ function softRaiting(appName, stars, altText) {
 	divElement.id = appName.toLowerCase() + "-id";
 
 	let linkElement = document.createElement("a");
-	linkElement.href = "http://www.google.com/search?ie=utf-8&btnI=&q=" + appName;
+
+	fetch("../json/apps.json")
+		.then((response) => {
+			return response.json();
+		})
+		.then((appsUrl) => {
+			linkElement.href = appsUrl[appName];
+		});
+
 	linkElement.target = "blank";
 
 	let imgElement = document.createElement("img");
@@ -83,4 +81,9 @@ function hideMenu() {
 	document
 		.getElementById("navMobile-menu")
 		.classList.remove("nav__mobile-visible");
+}
+
+function insertYear() {
+	let year = new Date();
+	document.write(year.getFullYear());
 }

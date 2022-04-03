@@ -1,5 +1,5 @@
-const UrlEs = "../lang/es.json";
-const UrlEn = "../lang/en.json";
+const UrlEs = "../json/es.json";
+const UrlEn = "../json/en.json";
 const requestEs = new XMLHttpRequest();
 requestEs.open("GET", UrlEs);
 requestEs.responseType = "json";
