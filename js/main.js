@@ -24,7 +24,7 @@ function softRaiting(appName, stars, altText) {
 
 	let imgElement = document.createElement("img");
 	imgElement.className = "app-logo";
-	imgElement.src = "/images/" + appName.toLowerCase() + "-logo.png";
+	imgElement.src = "./images/" + appName.toLowerCase() + "-logo.png";
 	imgElement.title = altText;
 	linkElement.appendChild(imgElement);
 	divElement.appendChild(linkElement);
