@@ -12,7 +12,7 @@ function softRaiting(appName, stars, altText) {
 
 	let linkElement = document.createElement("a");
 
-	fetch("../json/apps.json")
+	fetch("./json/apps.json")
 		.then((response) => {
 			return response.json();
 		})
