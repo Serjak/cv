@@ -87,3 +87,14 @@ function insertYear() {
 	let year = new Date();
 	document.write(year.getFullYear());
 }
+
+function language(e, src) {
+	fetch(src)
+		.then((response) => response.json())
+		.then((dict) => {
+			const elements = document.querySelectorAll(`[id^="lg"]`);
+			elements.forEach((element) => {
+				element.textContent = dict[element.id];
+			});
+		});
+}
